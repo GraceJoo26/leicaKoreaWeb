@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* variable.css */
+
+:root {
+  --var: 100%;
+
+  --co-bl: #000;
+  --co-wh: #fff;
+  --co-logo: #ed1b24;
+  --co-red1: #e7371f;
+}

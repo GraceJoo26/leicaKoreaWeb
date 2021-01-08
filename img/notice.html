@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 6]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 ie6" lang="ko-KR"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 ie7" lang="ko-KR"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9 ie8" lang="ko-KR"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10 ie9" lang="ko-KR"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="ko-KR"> <!--<![endif]-->
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>공지사항 - 라이카 카메라 코리아</title><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+
+<link rel="shortcut icon" href="/favicon.ico">
+		
+<link rel="stylesheet" href="/pc/resource/css/normalize.css">
+<link rel="stylesheet" href="/pc/resource/css/opt-default.css">
+<link rel="stylesheet" href="/pc/resource/css/slick.css">
+<link rel="stylesheet" href="/pc/resource/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/pc/resource/css/layout.css?v=202012091656">
+<link rel="stylesheet" href="/pc/resource/css/product.css?v=202101041632">
+<link rel="stylesheet" href="/pc/resource/css/sub.css?v=202012181452">
+
+
+<script src="/pc/resource/js/lib/greensock/TweenMax.min.js"></script>
+<script src="/pc/resource/js/lib/modernizr.custom.js"></script>
+<script src="/pc/resource/js/lib/jquery-1.12.4.min.js"></script>
+<script src="/pc/resource/js/lib/jquery.ui.1.11.4.min.js"></script>
+<script src="/pc/resource/js/lib/mighty.base.1.5.7.min.js"></script>
+<script src="/pc/resource/js/lib/mighty.sort.1.3.0.min.js"></script>
+<script src="/pc/resource/js/lib/slick.min.js"></script>
+<script src="/pc/resource/js/lib/jquery.mCustomScrollbar.min.js"></script>
+<script src="/pc/resource/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
+
+<script src="/pc/resource/js/pages/default.js"></script>
+
+
+<script>
+
+    	var suzzestGetArr = new Array();
+    	var suzzestSetArr = new Array();
+        function suzzestGet(v1,v2,v3,v4,v5,v6){
+			suzzestGetArr.push({a:v1,b:v2,c:v3,d:v4,e:v5,f:v6});
+        }
+        function suzzestSet(v1,v2,v3,v4,v5,v6){
+			suzzestSetArr.push({a:v1,b:v2,c:v3,d:v4,e:v5,f:v6});
+        }
+
+		$(function() {
+		
+			$.cachedScript = function( url, options ) {
+					options = $.extend( options || {}, {
+					dataType: "script",
+					cache: true,
+					url: url,
+					async: false
+				});
+				return $.ajax( options );
+			};
+			
+			function async_call(js, cb){
+				$.cachedScript(js).done(function() {
+					if(cb != undefined){
+						return eval(cb)();
+					}
+				})
+			}
+			
+//			switch(location.protocol){
+//				case 'http:' :
+//					async_call('http://service.stylecomment.com/common/js/social.js');
+//					async_call('http://collector.suzzest.com/js/suzzest.js');
+//					break;
+//				case 'https:' :
+//					break;
+//			}
+			async_call('//service.stylecomment.com/common/js/social.js');
+			async_call('//collector.suzzest.com/js/suzzest.js');			
+
+		});
+		
+	</script>
+
+
+	<meta name="title" content="라이카 카메라 코리아" />
+	<meta name="description" content="라이카 카메라 코리아" />
+	<meta name="keywords" content="라이카 카메라 코리아,LEICA" />
+	<meta name="image" content="" />
+	<meta property="og:url" content="http://www.leica-store.co.kr/customer/notice.asp?no=41" />
+	<meta property="og:title" content="라이카 카메라 코리아" />
+	<meta property="og:description" content="라이카 카메라 코리아" />
+	<meta property="og:image" content="http://www.leica-store.co.kr/data/img_yrl_leica.png" />
+	<meta property="og:type" content="company" />
+	<meta property="og:site_name" content="LEICA" />
+	<meta property="og:locale" content="ko_KR" />
+	<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+	<link rel="canonical" href="http://www.leica-store.co.kr/main/main.asp">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89530851-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-89530851-1');
+</script>
+
+	<!-- 개별 css, js -->
+    <script src="/pc/resource/js/pages/mypage.js"></script>
+
+<script>
+	var page = 0;
+	var listEnable = false;
+	var sNoticeNo = 41;
+
+	function FN_NoticeList() {
+		page++;
+		
+		jQuery.ajax({
+			type: 'POST',
+			url: '/pc/customer/notice_list.asp?page=' + page + '&sNoticeNo=' + sNoticeNo,
+			dataType: 'html',
+			success: function(html) {
+				if ( html != "" ) {
+
+					jQuery("#board__list").append( html );
+
+					jQuery("#view_more").hide();
+
+					var totalCount = jQuery("#board__list li:eq(0)").attr("data-total");
+					var pageSize = 10;
+					var pageCount = Math.floor( ( totalCount - 1 ) / pageSize ) + 1;
+					var nowCount = ( page * pageSize ) > totalCount ? totalCount : ( page * pageSize );
+					
+					if ( page >= pageCount ) {
+						listEnable = false;
+						return;
+					} else {
+						listEnable = true;
+					}
+				} else {
+					jQuery("#view_more").hide();
+					listEnable = false;
+				}
+			}
+		});
+	}
+	jQuery(function() {
+		FN_NoticeList();
+
+		jQuery(window).scroll(function() {
+			if ( jQuery(window).scrollTop() >= jQuery(document).height() - jQuery(window).height() - jQuery(".notice").height()- 300 || jQuery(document).height() < jQuery(window).height() ) {
+				if ( listEnable == true ) {
+					listEnable = false;
+					jQuery("#view_more").show();
+					setTimeout(function() { FN_NoticeList( );  }, 1000);
+				} 
+			}
+		})
+
+		if ("41" != "") {
+			jQuery("body").addClass('lyr__notice_view--open');
+			//	var no = jQuery(this).attr("data-val");
+			var no = "41";
+			jQuery.ajax({
+				type: 'POST',
+				url: '/mo/customer/notice_view.asp?no=' + no,
+				dataType: 'html',
+				success: function(html) {
+					if ( html != "" ) {
+
+						jQuery("#notice_cont").html( html );
+					}
+				}
+			});
+		}
+
+	})
+</script>	
+<body class="bg-color">
+
+	<!-- start of :: wrap -->
+	<div id="wrap">
+       <!--  start of : skipNavi -->
+<ul id="skipNavi">
+	<li><a href="#contents">본문내용 바로가기</a></li>
+	<li><a href="#footer">하단메뉴 바로가기</a></li>
+</ul>
+<!-- // end of  skipNavi -->
+
+<!-- start of :: header -->
+<header id="header">			
+	<div class="util">
+		<div class="inner">
+			<div class="left">
+				<a href="/mypage/regist.asp">REGISTER A PRODUCT</a>
+			</div>
+
+			<div class="right">
+				<div class="search-box">
+					<div class="inp-box">
+						<form action="javascript:searchRun();" name="searchForm" id="searchForm" method="get"  autocomplete="off">
+						<input type="text" id="search" name="searchItem"  class="inp__search" placeholder="SEARCH" autocomplete="off" />
+						</form>
+						<form name="searchFormReal" method="get"  autocomplete="off" action="/search/search_result.asp">
+							<input type="hidden" name="sWord" value />
+						</form>								
+						<label for="search">SEARCH</label>
+						<button type="button" class="btn__clear" onClick="jQuery('#search').val('');">clear</button>
+					</div>
+					<button type="button" class="btn__search" onClick="javascript:searchRun();">search</button>
+
+					<!-- 검색리스트 -->
+					<div class="list-box__search">
+						<div class="tab__btn">
+							<button type="button" class="on" data-tab="tab01">인기검색어</button><!-- 활성화시 클래스 on -->
+							<button type="button" data-tab="tab02">추천검색어</button>
+							<button type="button" data-tab="tab03">최근검색어</button>
+						</div>
+
+						<div class="tab__detail">
+							<!-- 인기검색어 -->
+							<div id="tab01" style="display: block;">
+								<ul class="list__word _rank">
+
+									<li><a href="/search/search_result.asp?sWord=d" data-rank="1">d</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=black" data-rank="2">black</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=M" data-rank="3">M</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=%uB9AC%uBDF0" data-rank="4">리뷰</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=%uD074%uB798%uC2A4" data-rank="5">클래스</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=D-LUX" data-rank="6">D-LUX</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=leica" data-rank="7">leica</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=m10-p" data-rank="8">m10-p</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=%uB77C%uC774%uCE74" data-rank="9">라이카</a></li>
+
+									<li><a href="/search/search_result.asp?sWord=q2" data-rank="10">q2</a></li>
+									
+									<!--li><a href="" data-rank="01">검색어1</a></li>
+									<li><a href="" data-rank="02">검색어2</a></li>
+									<li><a href="" data-rank="03">검색어3</a></li>
+									<li><a href="" data-rank="04">검색어4</a></li>
+									<li><a href="" data-rank="05">검색어5</a></li>
+									<li><a href="" data-rank="06">검색어6</a></li>
+									<li><a href="" data-rank="07">검색어7</a></li>
+									<li><a href="" data-rank="08">검색어8</a></li>
+									<li><a href="" data-rank="09">검색어9</a></li>
+									<li><a href="" data-rank="10">검색어10</a></li-->
+								</ul>
+
+								<!--p class="date__rank">2020.03.26&nbsp;11시 기준</p-->
+							</div>
+
+							<!-- 추천검색어 -->
+							<div id="tab02">
+								<ul class="list__word">
+
+									<li><a href="/product/m10p_white/">M10-P</a></li>
+
+									<li><a href="/product/dlux_silver/">D-LUX</a></li>
+
+									<li><a href="/product/q2/">Q2</a></li>
+
+									<li><a href="/product/sofort_red/">SOFORT</a></li>
+
+								</ul>
+
+							</div>
+
+							<!-- 최근검색어 -->
+							<div id="tab03">
+								<ul class="list__word" id="searchHistory">
+
+								<li><p class="msg">최근 검색어가 없습니다.</p></li>
+
+
+									<!-- 검색어 있을 경우 -->
+									<!--li>
+										<a href="">라이카1</a>
+										<button type="button" class="btn__delete">delete</button>
+									</li>
+									<li>
+										<a href="">라이카2</a>
+										<button type="button" class="btn__delete">delete</button>
+									</li>
+									<li>
+										<a href="">라이카3</a>
+										<button type="button" class="btn__delete">delete</button>
+									</li-->
+									
+									<!-- 검색어 없을 경우 -->
+									<!--li>
+										<p class="msg">최근 검색어가 없습니다.</p>
+									</li-->
+								</ul>
+								
+							</div>
+						</div>
+					</div>
+					<!-- //검색리스트 -->
+				</div>
+				<a class="util__language">한국어</a>
+
+				<a href="/member/login.asp" class="util__account">LOGIN ACCOUNT</a>
+
+				<a class="btn__eshop">ONLINE STORE</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="con">
+		<div class="inner">
+			<h1 class="logo">
+				<a href="/">LEICA</a>
+			</h1>
+
+			<nav class="gnb">
+				<ul>
+					<li><!-- 활성화시 클래스 on -->
+						<a href="/about/company.asp">LEICA CAMERA KOREA</a>
+
+						<div class="depth2">
+							<div class="inner">
+								<ul>
+									<li><a href="/about/company.asp">회사소개</a></li>
+									<li><a href="/customer/notice.asp">공지사항</a></li>
+									<li><a href="/customer/faq.asp">자주하는 질문(FAQ)</a></li>
+									<!--li><a href="/about/contact.asp">Contact</a></li-->
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="/akademie/list.asp">AKADEMIE</a>
+
+						<div class="depth2">
+							<div class="inner">
+								<ul>
+									<li><a href="/akademie/akademie.asp">라이카 아카데미 소개</a></li>
+									<li><a href="/akademie/list.asp">아카데미 일정</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="/press/list.asp">CONTENTS</a>
+
+						<div class="depth2">
+							<div class="inner">
+								<ul>
+									<li><a href="/press/list.asp">보도자료</a></li>
+									<li><a href="/exhibition/list.asp">라이카 전시 일정</a></li>
+									<!--li><a href="/gallery/list.asp">온라인 갤러리</a></li>
+									<li><a href="/interview/list.asp">인터뷰</a></li-->
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="/store/list.asp">STORE</a>
+						<!--div class="depth2">
+							<div class="inner">
+								<ul>
+									<li><a href="#">List</a></li>
+									<li><a href="#">View</a></li>
+								</ul>
+							</div>
+						</div-->
+					</li>
+					<li>
+						<a href="/mypage/regist.asp">CUSTOMER CARE</a>
+
+						<div class="depth2">
+							<div class="inner">
+								<ul>
+									<li><a href="/mypage/regist.asp">제품등록</a></li>
+									<li><a href="https://kr.leica-camera.com/Service-Support/Support/Downloads?category=&subcategory=&type=&language=93873" target="_blank">다운로드</a></li>
+									<li><a href="/customer/customer_file.asp">자료실</a></li>
+									<li><a href="/customer/consulting.asp">스토어 온·오프라인 상담 예약/조회</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				
+				
+				<!-- 장바구니 -->
+				<a href="/order/cart.asp" class="btn__cart"><span>0</span></a>
+
+				<div class="eshop">
+					<div class="inner">
+						<div class="type" style="background-image: url(/pc/resource/images/common/camera_leica_s.jpg);">
+							<a href="/Product/list.asp?cno=142">
+								<dl>
+									<dt>Leica S</dt>
+									<dd>완벽한 균형</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=143">Leica S3</a></li>
+							</ul>
+						</div>
+
+						<div class="type" style="background-image: url(/pc/resource/images/common/camera_leica_m.jpg);">
+							<a href="/Product/list.asp?cno=108">
+								<dl>
+									<dt>Leica M</dt>
+									<dd>순간에 더 가까이</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=139">Leica M10-R</a></li>
+								<li><a href="/Product/list.asp?cno=109">Leica M10-P</a></li>
+								<li><a href="/Product/list.asp?cno=119">M Lenses</a></li>
+								<li><a href="/Product/list.asp?cno=127">M Accessories</a></li>
+							</ul>
+						</div>
+
+						<div class="type" style="background-image: url(/pc/resource/images/common/camera_leica_sl.jpg);">
+							<a href="/Product/list.asp?cno=110">
+								<dl>
+									<dt>Leica SL</dt>
+									<dd>사진은 당신의 선택</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=120">Leica SL2</a></li>
+								<!--li><a href="/Product/list.asp?cno=111">Leica SL2</a></li-->
+								<li><a href="/Product/list.asp?cno=128">SL Lenses</a></li>
+								<li><a href="/Product/list.asp?cno=129">SL Accessories</a></li>
+							</ul>
+						</div>
+
+						<div class="type" style="background-image: url(/pc/resource/images/common/camera_leica_q.jpg);">
+							<a href="/Product/list.asp?cno=112">
+								<dl>
+									<dt>Leica Q</dt>
+									<dd>오차가 없는 완벽함</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=113">Leica Q2</a></li>
+								<li><a href="/Product/list.asp?cno=130">Leica Q-P</a></li>
+								<li><a href="/Product/list.asp?cno=131">Q Accessories</a></li>
+							</ul>
+						</div>
+
+						<div class="type" style="background-image: url(/pc/resource/images/common/camera_leica_cl_tl2.jpg);">
+							<a href="/Product/list.asp?cno=114">
+								<dl>
+									<dt>CL &amp; TL2</dt>
+									<dd>꿈은 크게 짐은 가볍게</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=115">Leica CL</a></li>
+								<li><a href="/Product/list.asp?cno=132">CL/TL LLenses</a></li>
+								<li><a href="/Product/list.asp?cno=133">CL/TL Accessories</a></li>
+							</ul>
+						</div>
+
+						<div class="type" style="background-image: url(/pc/resource/images/common/camera_compact.jpg);">
+							<a href="/Product/list.asp?cno=116">
+								<dl>
+									<dt>Compact</dt>
+									<dd>작지만 엄청난 성능</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=122">C-Lux</a></li>
+								<li><a href="/Product/list.asp?cno=123">D-Lux7</a></li>
+								<li><a href="/Product/list.asp?cno=124">V-Lux5</a></li>
+								<li><a href="/Product/list.asp?cno=134">Compact Accessories</a></li>
+							</ul>
+						</div>
+
+						<div class="type" style="background: url(/pc/resource/images/common/camera_so.jpg) no-repeat 7px top;">
+							<a href="/Product/list.asp?cno=117">
+								<dl>
+									<dt>S/O</dt>
+									<dd>자연에 매료되다</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=150">Ultravid</a></li>
+								<!--li><a href="/Product/list.asp?cno=125">Sofort</a></li>
+								<li><a href="/Product/list.asp?cno=136">Sofort Accessories</a></li>
+								<li><a href="/Product/list.asp?cno=140">Insta360</a></li>
+								<li><a href="/Product/list.asp?cno=141">Soft Goods</a></li-->
+							</ul>
+						</div>
+
+						<div class="type" style="background: url(/pc/resource/images/common/camera_leica_ona.jpg) no-repeat 7px top;">
+							<a href="/Product/list.asp?cno=144">
+								<dl>
+									<dt>Special</dt>
+									<dd>또 다른 특별함</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=149">Sofort</a></li>
+								<li><a href="/Product/list.asp?cno=145">Online Exclusive</a></li>
+								<li><a href="/Product/list.asp?cno=151">LEICA X ZEGNA</a></li>
+								<!--li><a href="/Product/list.asp?cno=146">Special Edition</a></li-->
+								<li><a href="/Product/list.asp?cno=147">Insta360</a></li>
+								<li><a href="/Product/list.asp?cno=148">Soft Goods</a></li>
+							</ul>
+						</div>
+
+						<!--div class="type" style="background: url(/pc/resource/images/common/camera_sport_optics.jpg) no-repeat 15px top;">
+							<a href="/Product/list.asp?cno=118">
+								<dl>
+									<dt>Sports Optics</dt>
+									<dd>자연을 경험하십시오.</dd>
+								</dl>
+							</a>
+
+							<ul>
+								<li><a href="/Product/list.asp?cno=126">Experience Nature</a></li>
+								<li><a href="/Product/list.asp?cno=137">Hunting</a></li>
+								<li><a href="/Product/list.asp?cno=138">Lifestyle &amp; leisure</a></li>
+							</ul>
+						</div-->
+
+						<div class="type _center"> <!-- 2020-12-09 센터정렬 클래스 추가 _center -->
+							<a href="/Product/index.asp">
+								<dl>
+									<dt>All Product</dt>
+									<dd>라이카 카메라 한눈에 보기.</dd>
+								</dl>
+							</a>							
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- // end of :: header -->		
+
+		<!-- start of :: contents -->
+		<div id="contents" class="mypage__wrap">
+			<div class="big-title">
+				<div class="inner w-1200">
+					<h2>CUSTOMER SERVICE</h2>
+				</div>
+			</div>
+			<div class="sub-con">
+				
+
+				<div class="my__lnb">
+					<h2>고객센터</h2>
+					<ul>
+						<!--활성화시 .on-->
+						<li class='on'><a href="notice.asp">공지사항</a></li>
+						<li ><a href="faq.asp">자주하는 질문(FAQ)</a></li>
+						<li ><a href="delivery.asp">배송 및 교환 정책</a></li>
+						<li ><a href="qna.asp">1:1문의</a></li>
+						<li><a href="/store/list.asp">매장안내</a></li>
+					</ul>
+				</div>
+				<div class="mypage-box">
+					<div class="my-top__title">					
+						<h3 class="tit">공지사항</h3>
+					</div>
+					<section class="box--line notice-box">
+						<ul class="board__list" id="board__list">
+
+							<!--li>
+								<div class="ask">
+									<p class="txt">품절된 상품 구매가 가능한가요?</p>
+									<span class="date">2020.03.30</span>
+								</div>
+								<div class="ans">
+									<p class="txt">
+										안녕하세요. 고객님<br>
+										오늘 발송처리 되었습니다. 감사합니다.									
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="ask">
+									<p class="txt">품절된 상품 구매가 가능한가요?</p>
+									<span class="date">2020.03.30</span>
+								</div>
+								<div class="ans">
+									<p class="txt">
+										안녕하세요. 고객님<br>
+										오늘 발송처리 되었습니다. 감사합니다.									
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="ask">
+									<p class="txt">품절된 상품 구매가 가능한가요?</p>
+									<span class="date">2020.03.30</span>
+								</div>
+								<div class="ans">
+									<p class="txt">
+										안녕하세요. 고객님<br>
+										오늘 발송처리 되었습니다. 감사합니다.									
+									</p>
+								</div>
+							</li-->
+						</ul>
+						<div class="loader" id="view_more"><img src="/pc/resource/images/common/waiting.gif" alt="" /></div>
+					</section>	
+				</div>
+			</div>
+		</div>
+		<!-- // end of :: contents -->
+	
+		<!-- start of :: footer -->
+<footer id="footer">
+	<nav class="sitemap">
+		<div class="inner">
+			<div>
+				<p>LEICA CAMERA KOREA</p>
+
+				<ul>
+					<li><a href="/about/company.asp">회사소개</a></li>
+					<!--li><a href="/about/contact.asp">Contact</a></li-->
+				</ul>
+
+				<p>LEGAL</p>
+
+				<ul>
+					<li><a href="#" id="popagree__btn">이용약관</a></li>
+					<li><a href="#" id="popprivacy__btn">개인정보처리방침</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<p>ONLINE SHOP</p>
+
+				<ul>
+					<li><a href="/Product/list.asp?cno=101">ALL Products</a></li>
+					<li><a href="/Product/list.asp?cno=142">Leica S</a></li>
+					<li><a href="/Product/list.asp?cno=108">Leica M</a></li>
+					<li><a href="/Product/list.asp?cno=110">Leica SL2</a></li>
+					<li><a href="/Product/list.asp?cno=112">Leica Q</a></li>
+					<li><a href="/Product/list.asp?cno=114">CL and TL2</a></li>
+					<li><a href="/Product/list.asp?cno=116">Compacts</a></li>
+					<li><a href="/Product/list.asp?cno=117">S/O</a></li>
+					<li><a href="/Product/list.asp?cno=144">Special</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<p>AKADEMIE</p>
+
+				<ul>
+					<li><a href="/akademie/akademie.asp">라이카 아카데미 소개</a></li>
+					<li><a href="/akademie/list.asp">아카데미 일정</a></li>
+				</ul>
+
+				<p>CUSTOMER SERVICE</p>
+
+				<ul>
+					<li><a href="/customer/notice.asp">공지사항</a></li>
+					<li><a href="/customer/faq.asp">자주하는 질문(FAQ)</a></li>
+					<li><a href="/customer/delivery.asp">배송 및 교환 정책</a></li>
+					<li><a href="/customer/qna.asp">1:1문의</a></li>
+					<li><a href="/store/list.asp">매장안내</a></li>
+				</ul>						
+			</div>
+
+			<div>
+				<p>CONTENTS</p>
+
+				<ul>
+					<li><a href="/press/list.asp">보도자료</a></li>
+					<li><a href="/exhibition/list.asp">라이카 전시 일정</a></li>
+					<!--li><a href="/gallery/list.asp">온라인 갤러리</a></li>
+					<li><a href="/interview/list.asp">인터뷰</a></li-->
+				</ul>
+
+				<p>CUSTOMER CARE</p>
+
+				<ul>
+					<li><a href="/mypage/regist.asp">제품등록</a></li>
+					<li><a href="https://kr.leica-camera.com/Service-Support/Support/Downloads?category=&subcategory=&type=&language=93873" target="_blank">다운로드</a></li>
+					<li><a href="/customer/customer_file.asp">자료실</a></li>
+				</ul>	
+			</div>
+
+			<div>
+				<p>LOGIN / SIGN UP</p>
+
+				<ul>
+					<li><a href="/member/login.asp">Login Account</a></li>
+					<li><a href="/member/join.asp">Sign Up</a></li>
+				</ul>
+			</div>
+
+			<div class="sns">
+				<p>SOCIAL</p>
+
+				<ul>
+					<li><a href="https://www.facebook.com/LeicaCameraKr/" target="_blank" class="sns__facebook">Facebook</a></li>
+					<li><a href="https://www.instagram.com/leica_kr/" target="_blank" class="sns__instagram">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="company">
+		<div class="inner">
+			<p class="address">
+				라이카 카메라 코리아(주) 대표자 : <span>수닐카울</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				전화번호: <span>1661-0405</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				서울시 강남구 테헤란로 208 안제타워 2층<br />
+				사업자등록번호 : <span>211-88-55103</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				통신판매업 신고번호 : <span>제2016-서울강남-01819호</span>
+			</p>
+			<p class="copyright">Copyright &copy; 2020 Leica Camera Korea Ltd.</p>
+			<a href="javascript:;" class="wesentliche">DAS WESENTLICHE</a>
+		</div>
+	</div>
+</footer>
+<!-- // end of :: footer -->
+
+
+<iframe name="dataFrame" id="dataFrame" style="display: none;"></iframe>
+	</div>
+    <!-- // end of :: wrap -->
+<div id="copy-txt" style="display:none;">
+라이카 공식 온라인 스토어가 오픈하였습니다.
+회원가입 이벤트 및 다양한 소식이 준비되어
+있으니 자세한 내용은 라이카 카메라 코리아
+@leica_kr 인스타그램 계정의 프로필 링크를
+클릭 부탁드립니다.
+
+#라이카온라인스토어오픈
+#라이카 #Leica
+</div>
+<script>
+	function logincheck(mode) {
+	
+		alert("이벤트가 종료되었습니다.");
+		retrun;
+	
+		jQuery.ajax({
+					type: "POST",
+					data: "mode="+ mode,
+					url: "/customer/login_check.asp",
+					dataType : "JSON",
+					success: function(data) {
+						returnurl = data.returnurl;
+						tmode = data.mode;
+						if (returnurl !="") {
+							if (tmode == "0") {
+								alert("로그인 후 이벤트 참여가 가능합니다.");
+							}
+							top.location.href=returnurl; 
+						}
+						else {
+								var t = document.createElement("textarea");
+								document.body.appendChild(t);
+								var tt = document.getElementById( "copy-txt" ).innerHTML;
+								//"<p>라이카 공식 온라인 스토어가 오픈하였습니다. <br>회원가입 이벤트 및 다양<br>한 소식이 준비되어 <br>있으니 자세한 내용은 라이카 카메라 코리아 <br>@leica_kr  인스타그램 계정의 프로필 링크를 <br>클릭 부탁드립니다. <br><br> #라이카온라인스토어오픈 <br>#라이카 #Leica<br><br> </p>@leica_kr 필수 태그!";
+								t.value = tt;
+								t.select();
+								document.execCommand("copy")
+								alert("복사되었습니다.");
+						}
+					},
+					error: function(e) {
+						//alert("e");
+					}
+				});
+	}
+</script>
+</body>
+</html>
