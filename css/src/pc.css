@@ -16,15 +16,17 @@
     margin-top: 10px;
     width: 160px;
     height: 12px;
-    font-size: 0.748rem;
-    color: var(--co-wh);
+    font-size: 0.77rem;
+    color: #6f6f6f;
+    font-weight: bolder;
   }
   .registerBox {
     float: right;
     width: 449.24px;
     height: 52px;
-    color: var(--co-wh);
+    color: #6f6f6f;
     font-size: 0.77rem;
+    font-weight: bolder;
   }
   .registerBox li {
     float: left;
@@ -69,6 +71,15 @@
     border-radius: 5%;
     width: 180px;
     height: 18px;
+    color: var(--co-wh);
   }
   /*=============================#registerBox.css=====================*/
+  #headBox {
+    max-width: 1280px;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  .mob_gnbBtn {
+    display: none;
+  }
 }

@@ -1,2 +1,47 @@
-@media only screen and (min-width: 380px) and (max-width: 1199) {
+@media only screen and (min-width: 280px) and (max-width: 1199px) {
+  #registerBox {
+    margin: auto;
+
+    height: 30px;
+    width: 100%;
+    background-color: var(--co-bl);
+    text-transform: uppercase;
+  }
+  #registerBox h2 {
+    float: left;
+    margin: auto;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 140px;
+    height: 12px;
+    font-size: 0.77rem;
+    color: #6f6f6f;
+    font-weight: bolder;
+  }
+  .mob_registerBox {
+    float: right;
+    width: 170px;
+    height: 20px;
+    color: #6f6f6f;
+    font-size: 0.77rem;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  .mob_registerBox li:nth-child(1) {
+    margin-top: 0;
+    float: left;
+    width: 16px;
+    height: 20px;
+    background-image: url(../../img/koreaflag.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .mob_registerBox li:nth-child(2) {
+    float: right;
+    margin-right: 16px;
+  }
+  .registerBox {
+    display: hidden;
+  }
 }
