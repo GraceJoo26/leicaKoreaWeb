@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "../css/src/mainpage.css"
-    <title>HOME - 라이카 카메라 코리아</title>
-    
-    <script src = "../js/base/jqeury-3.5.1.js"></script>
-    <script src = "../js/base/jquery-ui.js"></script>
-    <script src = "../js/src/mainpage.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link rel = "stylesheet" href = "../css/base/common.css">
+  <link rel = "stylesheet" href = "../css/base/reset.css">
 
+  <link rel = "stylesheet" href = "../css/src/mainpage.css">
+  <link rel = "stylesheet" href = "../css/src/pc.css">
+  <link rel = "stylesheet" href = "../css/src/mobile.css">
+    <title>HOME - 라이카 카메라 코리아</title>
 </head>
 <body>
     <div id="wrap">
       <!--===============resisterBox========================-->
       <header id = "registerBox">
         <h2>register a product</h2>
+        <ul class = "mob_registerBox">
+          <li><p><span class = "hidden_context">Korea Flag</span></p></li>
+          <li><i class="fas fa-user"></i>login account</li>
+        </ul>
+
         <ul class = "registerBox">
           <li>search<i class="fas fa-search"></i></></li>
           <li><p><span class = "hidden_context">Korea Flag</span></p>한국어</li>
@@ -26,14 +32,107 @@
       <!--===============headBox========================-->
       <header id="headBox">
         <h1><span class = "hidden_context">logo</span></h1>
-        <ul class = "global_nav">
-          <li>leica camera korea</li>
-          <li>akademie</li>
-          <li>contents</li>
-          <li>store</li>
-          <li>customer care</li>
+        <ul class = "mob_gnbBtn">
+          <li><span class = "hidden_context">line_01 </span></li>
+          <li><span class = "hidden_context">line_02</span></li>
+          <li><span class = "hidden_context">line_03</span></li>
         </ul>
-        <p></p>
+        <ul class = "mob_gnb">
+          <li>
+            <a href = "#">LEICA CAMERA KOREA</a>
+            <div class = "deapth_01">
+              <button type = "button"><i class="fas fa-chevron-left"></i> LEICA CAMERA KOREA</button>
+              <ul>
+                <li>회사소개</li>
+                <li>공지사항</li>
+                <li>자주하는 질문(FAQ)</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href = "#">AKADEMIE</a>
+            <div class = "deapth_01">
+              <button type = "button"><i class="fas fa-chevron-left"></i>AKADEMIE</button>
+              <ul>
+                <li>라이카 아카데미 소개</li>
+                <li>아카데미 일정</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href = "#">CONTENTS</a>
+            <div class = "deapth_01">
+              <button type = "button"><i class="fas fa-chevron-left"></i>CONTENTS</button>
+              <ul>
+                <li>보도자료</li>
+                <li>라이카 전시 일정</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href = "#">STORE</a>
+          </li>
+          <li>
+            <a href = "#">CUSTOMER CARE</a>
+            <div class = "deapth_01">
+              <button type = "button"><i class="fas fa-chevron-left"></i>CUSTOMER CARE</button>
+              <ul>
+                <li>제품등록</li>
+                <li>다운로드</li>
+                <li>자료실</li>
+                <li>스토어 온*오프라인 상담 예약/조회</li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+       
+        <ul class = "mob_searching">
+          <li>search<i class="fas fa-search"></i></li>
+          <li>search<i class="fas fa-shopping-bag"></i></li>
+          <li>online store</li>
+        </ul>
+        
+        <ul class = "gnb">
+          <li><a href = "#">leica camera korea</a>
+              <div class = "gnb_menu">
+              <ul>
+                <li><a href = "#">회사소개</a></li>
+                <li><a href = "#">공지사항</a></li>
+                <li><a href = "#">자주하는 질문(FAQ)</a></li>
+              </ul>
+              </div>
+          </li>
+          <li><a href = "#">akademie</a>
+            <div class = "gnb_menu">
+              <ul>
+                <li><a href = "#">라이카 아카데미 소개</a></li>
+                <li><a href = "#">아카데미 일정</a></li>
+              </ul>
+            </div>
+        </li>
+          <li><a href = "#">contents</a>
+            <div class = "gnb_menu">
+              <ul>
+                <li><a href = "#">보도자료</a></li>
+                <li><a href = "#">라이카 전시 일정</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href = "#">store</a>
+          </li>
+          <li><a href = "#">customer care</a>
+            <div class = "gnb_menu">
+              <ul>
+                <li><a href = "#">제품등록</a></li>
+                <li><a href = "#">다운로드</a></li>
+                <li><a href = "#">자료실</a></li>
+                <li><a href = "#">스토어 온*오프라인 상담 예약/조회</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <p><i class="fas fa-shopping-bag"></i></p>
       </header>
       <!--===============pictureBox========================-->
       <article id = "pictureBox">
@@ -49,6 +148,13 @@
       <!--===============localNavBox========================-->
       <aside id = "locaNav">
         <h2><span class = "hidden_context">인디케이터</span></h2>
+        <ul class = "mob_localNav">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
         <ul class = "localNav_01">
           <li><a href = "#">LEICA ㅣZEGNA Capsule</a><br/>Collection</li>
           <li><a href = "#">SPECIAL OFFER <br/>for 2021</a></li>
@@ -225,5 +331,8 @@
         </div>
       </footer>
     </div>
+    <!-- <script src = "../js/base/jquery-ui.js"></script>
+    <script src = "../js/base/jqeury-3.5.1.js"></script> -->
+    <script src = "../js/src/mainpage.js"></script>
 </body>
 </html>
