@@ -1,10 +1,9 @@
 @media only screen and (min-width: 280px) and (max-width: 1199px) {
   #registerBox {
     margin: auto;
-
     height: 30px;
     width: 100%;
-    background-color: var(--co-bl);
+    background-color: var(--co-re);
     text-transform: uppercase;
   }
   #registerBox h2 {
@@ -42,6 +41,122 @@
     margin-right: 16px;
   }
   .registerBox {
-    display: hidden;
+    display: none;
+  }
+  /*===========================headBox========================================*/
+  #headBox {
+    width: 100%;
+    height: 83px;
+    background-color: var(--co-bl);
+    border-bottom: 1px solid #2f2f2f;
+  }
+  #headBox h1 {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 20px;
+    background-image: url(../../img/leica_logo.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .gnb {
+    display: none;
+  }
+  .mob_gnbBtn {
+    float: left;
+    margin-top: 30px;
+    margin-left: 15px;
+    width: 20px;
+    height: 26px;
+    color: var(--co-wh);
+  }
+  .mob_gnbBtn li:nth-child(1) {
+    width: 20px;
+    height: 2px;
+    background-color: var(--co-wh);
+  }
+  .mob_gnbBtn li:nth-child(2) {
+    width: 20px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: var(--co-wh);
+  }
+  .mob_gnbBtn li:nth-child(3) {
+    width: 20px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: var(--co-wh);
+  }
+  .mob_gnb {
+    display: none;
+    position: absolute;
+    top: 114px;
+    width: 100%;
+    height: 1000px;
+    background-color: var(--co-bl);
+  }
+  .gnb_theme {
+    display: none;
+    padding: 1.36rem 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #2f2f2f;
+  }
+  .deapth_01 {
+    display: none;
+    top: 114px;
+  }
+  .deapth_01 ul {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #2f2f2f;
+  }
+  .deapth_01 ul li {
+    border-bottom: 1px solid #2f2f2f;
+    padding: 1.36rem 1rem;
+    font-weight: bold;
+  }
+  .deapth_01 button {
+    color: #fff;
+    padding: 1.36rem 1rem;
+    border-bottom: 1px solid #2f2f2f;
+    font-weight: bold;
+  }
+  .mob_searching {
+    float: right;
+    width: 180px;
+    height: 35px;
+    margin-right: 10px;
+    color: var(--co-wh);
+    font-size: 0.77rem;
+  }
+  .mob_searching li {
+    float: left;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 15px;
+  }
+  .mob_searching li:nth-child(1) {
+    font-size: 1.49rem;
+    margin-top: 23px;
+    margin-left: 0;
+  }
+  .mob_searching li:nth-child(2) {
+    font-size: 1.49rem;
+    margin-top: 23px;
+  }
+  .mob_searching li:nth-child(3) {
+    width: 90px;
+    height: 25px;
+    background-color: var(--co-red);
+    line-height: 1.4rem;
+    padding: 0.17rem 0.38rem;
+    margin-top: 23px;
+    border-radius: 5%;
+    font-weight: bold;
   }
 }

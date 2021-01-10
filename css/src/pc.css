@@ -4,7 +4,7 @@
     margin: auto;
     height: 40px;
     width: 1130px;
-    background-color: var(--co-bl);
+    background-color: var(--co-re);
     text-transform: uppercase;
   }
   .mob_registerBox {
@@ -79,7 +79,7 @@
   }
   /*=============================#registerBox.css=====================*/
   #headBox {
-    max-width: 1280px;
+    max-width: 1210px;
     height: 80px;
     margin: auto;
     box-sizing: border-box;
