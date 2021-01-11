@@ -121,6 +121,7 @@
     background-color: var(--co-bl);
   }
   .gnb_menu {
+    display: none;
     position: relative;
     width: 100%;
     height: 80px;
@@ -135,5 +136,23 @@
   }
   .gnb_menu ul li {
     float: left;
+  }
+  /*===========================================pictureBox====================*/
+  #pictureBox {
+    width: 100%;
+    height: 37.604167%;
+  }
+  .pictureBox {
+    width: 500%;
+    height: 37.604167vw;
+  }
+  .pictureBox li {
+    float: left;
+    width: 1366px;
+    height: 37.604167vw;
+    background-image: url(../../img/Top_main_web.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
   }
 }
