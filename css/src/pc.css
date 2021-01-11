@@ -143,16 +143,57 @@
     height: 37.604167%;
   }
   .pictureBox {
+    position: relative;
     width: 500%;
     height: 37.604167vw;
   }
   .pictureBox li {
     float: left;
-    width: 1366px;
+    width: 1200px;
     height: 37.604167vw;
     background-image: url(../../img/Top_main_web.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
+  }
+  /*=======================================localNav=====================*/
+  .localNav {
+    width: 100%;
+    height: 140px;
+    background-color: #f1f3f4;
+  }
+  .mob_localNav {
+    display: none;
+  }
+  .localNav_01 {
+    margin: auto;
+    width: 1200px;
+    height: 120px;
+    background-color: #f1f3f4;
+    border-bottom: 1px solid rgb(221,221,221);
+    box-sizing: border-box;
+   
+  }
+  .localNav_01 li {
+    float: left;
+    width: 210px;
+    height: 35px;
+    border-right: 1px solid #cacaca;
+    display: inline-block;
+    margin-top: 2.7rem;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    word-spacing: -0.37px;
+   
+}
+  }
+  .localNav_01 li.on {
+    background-color: var(--co-red);
+    border-bottom: 1px solid var(--co-red);
+  }
+  .localNav_01 li:nth-child(5) {
+    width: 190px;
+    border: none;
   }
 }
