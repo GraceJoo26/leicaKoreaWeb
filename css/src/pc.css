@@ -308,7 +308,6 @@
     color: red;
   }
   .slide {
-    position: absolute;
     top: 2100px;
     width: 1500%;
     height: 560px;
@@ -407,6 +406,7 @@
   }
   .leica_classBox {
     float: left;
+    overflow: hidden;
     margin-left: 30px;
     width: 420px;
     height: 700px;
@@ -423,5 +423,13 @@
     font-size: 1.3rem;
     font-weight: bold;
     padding-top: 20px;
+  }
+  .leica_classEachBox {
+    width: 420px;
+    height: 1000%;
+  }
+  .leica_classEachBox li {
+    width: 420px;
+    height: 80px;
   }
 }
