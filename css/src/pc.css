@@ -1,5 +1,7 @@
 @media only screen and (min-width: 1200px) {
-  #wrap{background-color: var(--co-bl);}
+  #wrap {
+    background-color: var(--co-bl);
+  }
   #registerBox {
     padding: 9px 40px;
     margin: auto;
@@ -146,10 +148,10 @@
     width: 500%;
     height: 40vw;
   }
-  .pictureBox li{
+  .pictureBox li {
     position: relative;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     float: left;
     width: 98.6vw;
     height: 40vw;
@@ -157,31 +159,41 @@
     background-position: 50% 50%;
     background-size: cover;
   }
-  .mainPic_01{
-    left:0;
+  .mainPic_01 {
+    left: 0;
     background-image: url(../../img/firstPC.jpg);
   }
-  .mainExplain_01{
-    position:absolute;
-    top:56%;
-    left:10%;
+  .mainExplain_01 {
+    position: absolute;
+    top: 56%;
+    left: 10%;
     font-size: 1.7rem;
     font-weight: bold;
     line-height: 3rem;
   }
-  .pictureBox i{ color:red;}
-  .mainPic_02{background-image: url(../../img/secondPC.jpg);}
-  .mainPic_03{background-image: url(../../img/thirdPC.jpg);}
-  .mainPic_04{background-image: url(../../img/fourthPC.jpg);}
-  .mainPic_05{background-image: url(../../img/fifthPC.jpg);}
-  .mainExplain{
-    position:absolute;
-    top:65%;
-    left:10%;
+  .pictureBox i {
+    color: red;
+  }
+  .mainPic_02 {
+    background-image: url(../../img/secondPC.jpg);
+  }
+  .mainPic_03 {
+    background-image: url(../../img/thirdPC.jpg);
+  }
+  .mainPic_04 {
+    background-image: url(../../img/fourthPC.jpg);
+  }
+  .mainPic_05 {
+    background-image: url(../../img/fifthPC.jpg);
+  }
+  .mainExplain {
+    position: absolute;
+    top: 65%;
+    left: 10%;
     font-size: 1.7rem;
     font-weight: bold;
     line-height: 3rem;
-    color:#fff;
+    color: #fff;
   }
 
   /*=======================================localNav=====================*/
@@ -198,11 +210,11 @@
     width: 1200px;
     height: 120px;
     background-color: #f1f3f4;
-    border-bottom: 1px solid rgb(221,221,221);
+    border-bottom: 1px solid rgb(221, 221, 221);
     box-sizing: border-box;
   }
   .localNav_01 li {
-    float:left;
+    float: left;
     width: 210px;
     height: 35px;
     border-right: 1px solid #cacaca;
@@ -213,7 +225,7 @@
     font-weight: bold;
     word-spacing: -0.37px;
   }
-  
+
   .localNav_01 li.on {
     background-color: var(--co-red);
     border-bottom: 1px solid var(--co-red);
@@ -222,93 +234,194 @@
     width: 190px;
     border: none;
   }
-/*=====================camera_expalinBox========================*/
-#camera_explainBox{
-  margin:auto;
-  width:100%;
-  height: 1200px;
-  background-color:  #f1f3f4;
-}
-.explain{
-  margin:auto;
-  width:1250px;
-  height:1048px;
-}
-.camera{
-  float:left;
-  margin:auto;
-  margin-top:50px;
-  margin-right:50px;
-  width:600px;
-  height: 850px;
-  background-image: url(../../img/img_main_banner02_201211.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.explain p{
-  color:#fff;
-}
-.bundlePack{
-  float:left;
-  margin:auto;
-  margin-top:50px;
-  width:600px;
-  height:400px;
-  background-image: url(../../img/img_main_banner03_201214_3.jpg);
-  background-position: 50% 20%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.loba2020Pic{
-  float:left;
-  margin:auto;
-  margin-top:50px;
-  width:600px;
-  height:400px;
-  background-image: url(../../img/img_main_banner_O.jpg);
-  background-position: 50% 20%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.explain li{
-  position:relative;
-}
-.threePic{
-  position:absolute;
-  bottom:30px;
-  left:40px;
-}
-.leicaQ2, .leicaQ2BundleBag, .leicaOskar{
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.cam_explain,.SpecialBundle, .loba_2020{
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 2.5rem;
-}
-.explain i{
-  color:red;
-}
-.slide{
-  position:relative;
-  width:1500%;
-  height:560px;
-  background-color: #cdc;
-}
-.slide li{
-  float:left;
-  position:absolute;
-  width:560px;
-  height:560px;
-  background-color: #fff;
+  /*=====================camera_expalinBox========================*/
+  #camera_explainBox {
+    margin: auto;
+    width: 100%;
+    height: 1600px;
+    background-color: #f1f3f4;
+  }
+  .explain {
+    margin: auto;
+    width: 1250px;
+    height: 1200px;
+  }
+  .camera {
+    float: left;
+    margin: auto;
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 600px;
+    height: 850px;
+    background-image: url(../../img/img_main_banner02_201211.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .explain p {
+    color: #fff;
+  }
+  .bundlePack {
+    float: left;
+    margin: auto;
+    margin-top: 50px;
+    width: 600px;
+    height: 400px;
+    background-image: url(../../img/img_main_banner03_201214_3.jpg);
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .loba2020Pic {
+    float: left;
+    margin: auto;
+    margin-top: 50px;
+    width: 600px;
+    height: 400px;
+    background-image: url(../../img/img_main_banner_O.jpg);
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .explain li {
+    position: relative;
+  }
+  .threePic {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+  }
+  .leicaQ2,
+  .leicaQ2BundleBag,
+  .leicaOskar {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .cam_explain,
+  .SpecialBundle,
+  .loba_2020 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+  }
+  .explain i {
+    color: red;
+  }
+  .slide {
+    position: absolute;
+    top: 2100px;
+    width: 1500%;
+    height: 560px;
+  }
+  .slide li {
+    float: left;
+    margin-left: 25px;
+    width: 560px;
+    height: 560px;
+    background-color: #fff;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../../img/img_item_compact_d_200518.jpg);
+  }
+  .first_slide {
+    margin-left: 0;
+  }
+  .cameraSlide {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .subTheme {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .cam_theme {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    line-height: 2.1rem;
+  }
+  .cam_theme i {
+    color: red;
+  }
 
-}
-/*==========================#academy_schedule=============================*/
-#academy_schedule{
-  width:100%;
-  height:2323px;
-  background-color: #fff;
-}
+  /*==========================#academy_schedule=============================*/
+  #academy_schedule {
+    margin: auto;
+    width: 100%;
+    height: 2323px;
+    background-color: #fff;
+  }
+  #academy_schedule h2 {
+    margin: auto;
+    padding-top: 24rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
+  .storytellingPicWrap {
+    margin: auto;
+    width: 1200px;
+    height: 700px;
+    padding-top: 50px;
+    background-color: #fff;
+  }
+  .storytellingPic {
+    float: left;
+    width: 700px;
+    height: 800px;
+    background-image: url(../../img/list_26.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .date {
+    padding-top: 19rem;
+    margin-left: 60px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .line {
+    display: block;
+    margin-left: 60px;
+    margin-top: 14px;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+  }
+  .leica_room {
+    display: block;
+    margin-left: 60px;
+    margin-top: 14px;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  .storytelling {
+    margin-left: 60px;
+    padding-top: 150px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  .storytelling i {
+    color: red;
+  }
+  .leica_classBox {
+    float: left;
+    margin-left: 30px;
+    width: 420px;
+    height: 700px;
+    border-bottom: 3px solid #6f6f6f;
+    border-top: 3px solid #6f6f6f;
+  }
+  .about_01 {
+    position: relative;
+    top: -40px;
+    left: 350px;
+  }
+  .about {
+    color: red;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 20px;
+  }
 }
