@@ -430,6 +430,15 @@
   }
   .leica_classEachBox li {
     width: 420px;
-    height: 80px;
+    height: 200px;
   }
+  .class_date,.red_point,.leicaTheme{
+    float:left;
+  }
+  .red_point{
+    width:5px; height: 5px;
+    background-color: red;
+  }
+  
+  
 }
