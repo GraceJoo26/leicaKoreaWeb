@@ -353,6 +353,7 @@
   }
   #academy_schedule h2 {
     margin: auto;
+    padding: 2.3rem;
     padding-top: 24rem;
     text-transform: uppercase;
     font-size: 1.8rem;
@@ -444,6 +445,7 @@
   }
   /*==============leica_exhibition==============*/
   #leica_exhibition {
+    position: relative;
     width: 100%;
     height: 1000px;
     background-color: #fff;
@@ -455,6 +457,18 @@
   }
   .leica_exhibitionInfo h2 {
     font-size: 2rem;
-    padding-bottom: 3rem;
+    padding: 2.3rem;
+  }
+  img {
+    width: 1200px;
+    height: auto;
+  }
+  .award {
+    position: absolute;
+    top: 32rem;
+    padding-left: 2.3rem;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
   }
 }
