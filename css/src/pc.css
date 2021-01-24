@@ -348,7 +348,7 @@
   #academy_schedule {
     margin: auto;
     width: 100%;
-    height: 2323px;
+    height: 1500px;
     background-color: #fff;
   }
   #academy_schedule h2 {
@@ -432,13 +432,29 @@
     width: 420px;
     height: 200px;
   }
-  .class_date,.red_point,.leicaTheme{
-    float:left;
+  .class_date,
+  .red_point,
+  .leicaTheme {
+    float: left;
   }
-  .red_point{
-    width:5px; height: 5px;
+  .red_point {
+    width: 5px;
+    height: 5px;
     background-color: red;
   }
-  
-  
+  /*==============leica_exhibition==============*/
+  #leica_exhibition {
+    width: 100%;
+    height: 1000px;
+    background-color: #fff;
+  }
+  .leica_exhibitionInfo {
+    margin: auto;
+    width: 1200px;
+    height: 1000px;
+  }
+  .leica_exhibitionInfo h2 {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+  }
 }
