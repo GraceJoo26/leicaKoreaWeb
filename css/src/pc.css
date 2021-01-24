@@ -3,11 +3,15 @@
     background-color: var(--co-bl);
   }
   #registerBox {
+    width: 100%;
+    height: auto;
+    background-color: #151515;
+  }
+  .registerBox_01 {
     padding: 9px 40px;
     margin: auto;
     height: 40px;
     width: 1130px;
-    background-color: var(--co-re);
     text-transform: uppercase;
   }
   .mob_registerBox {
@@ -518,7 +522,7 @@
   }
   .sitemap {
     width: 1200px;
-    height: 400px;
+    height: 200px;
     padding: 3.2rem;
   }
   .sitemap div {
