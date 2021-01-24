@@ -468,7 +468,24 @@
     top: 32rem;
     padding-left: 2.3rem;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
+  }
+
+  .exhibit_date {
+    position: absolute;
+    top: 39.5rem;
+    left: 6rem;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  .exhibit_date::before {
+    content: ' ';
+    position: absolute;
+    top: -1rem;
+    left: 0rem;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
   }
 }
