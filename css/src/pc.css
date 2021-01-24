@@ -447,7 +447,7 @@
   #leica_exhibition {
     position: relative;
     width: 100%;
-    height: 1000px;
+    height: 800px;
     background-color: #fff;
   }
   .leica_exhibitionInfo {
@@ -487,5 +487,51 @@
     width: 50px;
     height: 3px;
     background-color: #fff;
+  }
+  /*=====================product_registerBox==========*/
+  #product_registerBox {
+    width: 100%;
+    height: 230px;
+    background-color: #e7371f;
+  }
+  .product {
+    padding-top: 5rem;
+    padding-left: 3.2rem;
+    color: #fff;
+  }
+  .product dd {
+    padding-top: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .product dd a {
+    width: 500px;
+    height: 10px;
+  }
+
+  /*=====================footBox============*/
+  #footBox {
+    margin: auto;
+    width: auto;
+    height: auto;
+    color: #fff;
+  }
+  .sitemap {
+    width: 1200px;
+    height: 400px;
+    padding: 3.2rem;
+  }
+  .sitemap div {
+    float: left;
+    padding: 2.3rem;
+  }
+  .footer_01 {
+    margin-left: 0;
+  }
+  .sitemap div dt {
+    text-transform: uppercase;
+    margin-top: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
   }
 }
