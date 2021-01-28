@@ -430,7 +430,8 @@
     padding-top: 20px;
   }
   .leica_classEachBox {
-    width: 420px;
+    position:relative;
+    width: 417px;
     height: 1000%;
   }
   .leica_classEachBox li {
@@ -441,11 +442,50 @@
   .red_point,
   .leicaTheme {
     float: left;
+    margin-top: 50px;
+  }
+  .class_picture{
+    float:right;
+    margin-top: 50px;
+  }
+  .class_picture img{
+    width:161px;
+    height:161px;
+  }
+  .leicaTheme{
+    margin-left:60px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height:70px;
+  }
+  .place{
+    float:left;
+    margin-top:20px;
+    margin-left:90px;
+  }
+  .leicaTheme i {
+    color:red;
   }
   .red_point {
-    width: 5px;
-    height: 5px;
+    position:absolute;
+    z-index:10;
+    left:45px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
     background-color: red;
+  }
+  .leica_classEachBox::after{
+    content:' ';
+    display:block;
+    position:absolute;
+    z-index: 0;
+    top:-30px;
+    left:50px;
+    width:1px;
+    height:1000px;    
+    background-color: #ccc;
+
   }
   /*==============leica_exhibition==============*/
   #leica_exhibition {
