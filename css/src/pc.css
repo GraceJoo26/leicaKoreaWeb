@@ -410,6 +410,7 @@
     color: red;
   }
   .leica_classBox {
+    position:relative;
     float: left;
     overflow: hidden;
     margin-left: 30px;
@@ -430,7 +431,6 @@
     padding-top: 20px;
   }
   .leica_classEachBox {
-    position:relative;
     width: 417px;
     height: 1000%;
   }
@@ -443,6 +443,22 @@
   .leicaTheme {
     float: left;
     margin-top: 50px;
+  }
+  .class_date{
+    font-weight: bold;
+    width:20px;
+  }
+  .class_date::after{
+    content:' ';
+    display:block;
+    position:absolute;
+    z-index: 10;
+    margin-top: -30px;
+    margin-left:46px;
+    width:8px;
+    height:8px;
+    border-radius: 100%;
+    background-color: red;
   }
   .class_picture{
     float:right;
@@ -460,8 +476,18 @@
   }
   .place{
     float:left;
-    margin-top:20px;
+    margin-top:-35px;
     margin-left:90px;
+    font-size: 0.9rem;
+    color:#6f6f6f;
+  }
+  .place::after{
+    content:' ';
+    display:block;
+    margin-top: 35px;
+    width:600px;
+    height:1px;
+    background-color: #ccc;
   }
   .leicaTheme i {
     color:red;
@@ -562,7 +588,7 @@
   }
   .sitemap {
     width: 1200px;
-    height: 200px;
+    height: 350px;
     padding: 3.2rem;
   }
   .sitemap div {
@@ -577,5 +603,15 @@
     margin-top: 2rem;
     font-weight: bold;
     margin-bottom: 1.2rem;
+  }
+  .footer{
+    height:100px;
+    width:100%;
+    border-top: 1px solid #6f6f6f;
+    font-size: 0.2rem;
+    color:#6f6f6f;
+  }
+  .companyInfo, .copyright{
+    padding:2rem;
   }
 }
