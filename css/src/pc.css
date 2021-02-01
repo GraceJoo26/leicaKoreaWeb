@@ -127,6 +127,10 @@
     line-height: 4.5rem;
     background-color: var(--co-bl);
   }
+  .gnb_title:focus,
+  .gnb_title:hover{
+    color:#e7371f;
+  }
   .gnb_menu {
     display: none;
     position: relative;
