@@ -12,14 +12,22 @@
     const gnbUl = $('.gnb');
     const gnbTitLi = gnbUl.children('.gnb_title');
     const gnbMenu = gnbTitLi.find('.gnb_menu');
-    const gnbMuLi = gnbMenu.find('ul');
-
-    gnbTitLi.on('mouseover hover', function(e){
+    const gnbMuUl = gnbMenu.find('ul');
+    const gnbMuLi = gnbMuUl.find('li');
+    
+    
+    gnbTitLi.on('mouseover', function(e){
         e.preventDefault();
-        if (gnbMenu.css({display}) == 'none'){
-            gnbMenu.show();
-        }
-    })
+        gnbMenu.stop().show();
+        let it = $(this);
+        it.siblings('gnbMuUl').hide(); 
+        });
+    gnbTitLi.on('mouseleave',function(e){
+        e.preventDefault();
+        gnbMenu.stop().hide();
+        let it = $(this);
+        it.siblings('gnbMuUl').show();
+        })
     
    
 })(jQuery);
