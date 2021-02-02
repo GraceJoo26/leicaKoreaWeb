@@ -1,4 +1,4 @@
-(function($){
+/*(function($){
 
     /* //메뉴slide만들기
     const wrap = document.querySelector('#wrap');//전체 감싼 박스
@@ -9,7 +9,7 @@
  */
     //메뉴 slide만들기
 
-    const gnbUl = $('.gnb');
+   /* const gnbUl = $('.gnb');
     const gnbTitLi = gnbUl.children('.gnb_title');
     const gnbMenu = gnbTitLi.find('.gnb_menu');
     const gnbMuUl = gnbMenu.find('ul');
@@ -30,4 +30,12 @@
         })
     
    
-})(jQuery);
+})(jQuery);*/
+
+
+
+//dom_dropDown.js
+ const domGnb = document.getElementsByClassName('.gnb')[0];
+ const domTitle = document.getElementsByClassName('.gnb_title');
+ const dom
+
