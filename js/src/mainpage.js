@@ -37,5 +37,11 @@
 //dom_dropDown.js
  const domGnb = document.getElementsByClassName('.gnb')[0];
  const domTitle = document.getElementsByClassName('.gnb_title');
- const dom
+ const domMnuUl = document.getElementsByClassName('.gnb_ul');
+ const domMnuLi = document.getElementsByTagName('li');
+
+ let i = 0;
+ for (; i < domTitle.length ; i++){
+     domTitle[i].setAttribute('tabindex', '0');
+ }
 
