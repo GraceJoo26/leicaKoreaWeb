@@ -35,34 +35,39 @@
 
 
 //dom_dropDown.js
- const domGnb = document.getElementsByClassName('.gnb')[0];
- const domTitle = document.getElementsByClassName('.gnb_title');
- const domMnuUl = document.getElementsByClassName('.inner_menu');
- const domMnuLi =domMnuUl.childnodes;
+
+ const domTitle = document.getElementsByClassName('gnb_title');
+ const domMnudep2 = document.getElementsByClassName('depth2');
+ 
 
  let i = 0;
  for (; i < domTitle.length ; i++){
      domTitle[i].setAttribute('tabindex', '0');
- }
+ };
 
  const DomMnuLiFn = function ( action ){
      let j = 0;
-     for ( ; j < domMnuLi.length ; j++){
-        domMnuLi[j].style.display = action;
+     for ( ; j < domMnudep2.length ; j++){
+        domMnudep2[j].style.display = action;
      }
  };
 
  //DomMnuFn('block');
  
-domTitle[i].addEventListener('click', function(){ 
-    DomMnuLiUl('block'); 
-    domTitle[i].style.color ="red";
- });
- domTitle[i].addEventListener('mouseleave', function(){
-    DomMnuUlFn('none');
- });
- domTitle[i].addEventListener('focus', function(){
-     DomMnuUlFn('block');
-     domTitle[i].style.color ="red";
- });
+ //domTitle.onclick = function(){ DomMnuLiUl('block'); domTitle.style.color ="red";};
+ //domTitle.onmouseleave = function(){ DomMnuUlFn('none');};
 
+ 
+    this.addEventListener('click', function(e){ 
+        for (i=0; i < domTitle.length ; i++){
+            if(e.target.parentNode == domTitle[i]){
+                console.log(e.target.parentNode.childNodes);
+                let depth = e.target.parentNode.childNodes[3]
+                console.log(depth);
+                depth.style.display = 'block';
+            }
+        }
+    });
+
+ domTitle[0].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); });
+ domTitle[0].addEventListener('focus', function(){ DomMnuLiFn('block'); });
