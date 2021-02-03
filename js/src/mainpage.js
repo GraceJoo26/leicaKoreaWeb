@@ -37,11 +37,32 @@
 //dom_dropDown.js
  const domGnb = document.getElementsByClassName('.gnb')[0];
  const domTitle = document.getElementsByClassName('.gnb_title');
- const domMnuUl = document.getElementsByClassName('.gnb_ul');
- const domMnuLi = document.getElementsByTagName('li');
+ const domMnuUl = document.getElementsByClassName('.inner_menu');
+ const domMnuLi =domMnuUl.childnodes;
 
  let i = 0;
  for (; i < domTitle.length ; i++){
      domTitle[i].setAttribute('tabindex', '0');
  }
+
+ const DomMnuLiFn = function ( action ){
+     let j = 0;
+     for ( ; j < domMnuLi.length ; j++){
+        domMnuLi[j].style.display = action;
+     }
+ };
+
+ //DomMnuFn('block');
+ 
+domTitle[i].addEventListener('click', function(){ 
+    DomMnuLiUl('block'); 
+    domTitle[i].style.color ="red";
+ });
+ domTitle[i].addEventListener('mouseleave', function(){
+    DomMnuUlFn('none');
+ });
+ domTitle[i].addEventListener('focus', function(){
+     DomMnuUlFn('block');
+     domTitle[i].style.color ="red";
+ });
 
