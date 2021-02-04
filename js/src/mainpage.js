@@ -35,10 +35,12 @@
 
 
 //dom_dropDown.js
+'use strict';
 
  const domTitle = document.getElementsByClassName('gnb_title');
  const domMnudep2 = document.getElementsByClassName('depth2');
- 
+ const domInnerMnu = document.getElementsByClassName('inner_menu');
+ const domMnuLi = document.getElementsByClassName('mnuLi');
 
  let i = 0;
  for (; i < domTitle.length ; i++){
@@ -58,16 +60,25 @@
  //domTitle.onmouseleave = function(){ DomMnuUlFn('none');};
 
  
-    this.addEventListener('click', function(e){ 
+    this.addEventListener('mouseover', function(e){ 
         for (i=0; i < domTitle.length ; i++){
             if(e.target.parentNode == domTitle[i]){
-                console.log(e.target.parentNode.childNodes);
-                let depth = e.target.parentNode.childNodes[3]
-                console.log(depth);
+                //console.log(e.target.parentNode.childNodes);
+                let depth = e.target.parentNode.childNodes[3];
+                //console.log(depth);
                 depth.style.display = 'block';
+                domTitle[i].style.color = 'red';
+                domMnuLi[i].style.display = 'block';
             }
         }
     });
 
- domTitle[0].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); });
+
+ domTitle[0].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[0].style.color = '#fff'; });
+ domTitle[1].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[1].style.color = '#fff';});
+ domTitle[2].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[2].style.color = '#fff';});
+ 
+ domTitle[4].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[4].style.color = '#fff';});
+ 
  domTitle[0].addEventListener('focus', function(){ DomMnuLiFn('block'); });
+
