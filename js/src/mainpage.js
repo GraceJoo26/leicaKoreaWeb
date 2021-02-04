@@ -67,6 +67,7 @@
                 let depth = e.target.parentNode.childNodes[3];
                 //console.log(depth);
                 depth.style.display = 'block';
+                depth.style.transition = "all 2s ease-in-out";
                 domTitle[i].style.color = 'red';
                 domMnuLi[i].style.display = 'block';
             }
@@ -74,11 +75,14 @@
     });
 
 
- domTitle[0].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[0].style.color = '#fff'; });
+ domTitle[0].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[0].style.color = '#fff';});
  domTitle[1].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[1].style.color = '#fff';});
  domTitle[2].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[2].style.color = '#fff';});
- 
  domTitle[4].addEventListener('mouseleave', function(){ DomMnuLiFn('none'); domTitle[4].style.color = '#fff';});
  
- domTitle[0].addEventListener('focus', function(){ DomMnuLiFn('block'); });
+ domTitle[0].addEventListener('focus', function(){ DomMnuLiFn('block');  });
+ domTitle[1].addEventListener('focus', function(){ DomMnuLiFn('block');  });
+ domTitle[2].addEventListener('focus', function(){ DomMnuLiFn('block');  });
+ domTitle[3].addEventListener('focus', function(){ DomMnuLiFn('block');  });
+ domTitle[4].addEventListener('focus', function(){ DomMnuLiFn('block'); });
 
