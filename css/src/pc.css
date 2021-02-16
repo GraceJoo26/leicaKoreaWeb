@@ -215,6 +215,7 @@
   /*===========================================pictureBox====================*/
   #pictureBox {
     width: 100%;
+    overflow:hidden;
   }
   .pictureBox {
     width: 500%;
@@ -287,6 +288,7 @@
   }
   .localNav_01 li {
     float: left;
+    padding-bottom:3.2rem;
     width: 210px;
     height: 35px;
     border-right: 1px solid #cacaca;
@@ -299,12 +301,11 @@
   }
 
   .localNav_01 li.on {
-    background-color: var(--co-red);
+    color: var(--co-red);
     border-bottom: 1px solid var(--co-red);
   }
   .localNav_01 li:nth-child(5) {
     width: 190px;
-    border: none;
   }
   /*=====================camera_expalinBox========================*/
   #camera_explainBox {
