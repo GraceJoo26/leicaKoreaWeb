@@ -18,20 +18,29 @@
 
     let slideN = 0;
     let permission = true;
-    let timed = 2000;
-
-
+    let timed = 2000;      
+           
     indiA.on('mouseenter focus click', function(e){
-        e.preventDefault();
-        let it = $(this);
-        let slideN = it.parent('li').index();
+                e.preventDefault();
+                
+                let it = $(this);
+                let slideN = it.parent('li').index();
+                
+                indiLi.eq(slideN).addClass('on');
+                indiLi.eq(slideN).siblings().removeClass('on');
+                slideN+=1;
+                
+                if( e.type == 'focus' || e.type == 'mouseenter'){
+                    pictureBoxUl.stop().animate({'marginLeft': ((slideN-1) * -100) +'%'});
+                }
+    });    
         
+   let timer = setInterval(function(){
         indiLi.eq(slideN).addClass('on');
         indiLi.eq(slideN).siblings().removeClass('on');
-        
-        if( e.type == 'focus' || e.type == 'mouseenter'){
-            pictureBoxUl.stop().animate({'marginLeft': ((slideN) * -100) +'%'})
-        }  
-    });
+       pictureBoxUl.stop().animate({'marginLeft': ((slideN) * -100) +'%'});
+       slideN +=1;
+   },timed);
+   timer();
 
 })(jQuery);
