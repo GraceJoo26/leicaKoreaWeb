@@ -40,7 +40,10 @@
         indiLi.eq(slideN).siblings().removeClass('on');
        pictureBoxUl.stop().animate({'marginLeft': ((slideN) * -100) +'%'});
        slideN +=1;
+       if(slideN >= 5){
+        slideN = 0;
+       }
    },timed);
-   timer();
+   
 
 })(jQuery);
