@@ -385,6 +385,7 @@
     color: red;
   }
   .slideWrap{
+    position:relative;
     margin:auto;
     width: 1200px;
     height:560px;
@@ -392,24 +393,19 @@
   }
   .slide {
     position:absolute;
-    top: 2100px;
     width: 1500%;
     height: 560px;
-    overflow:hidden
+    overflow:hidden;
   }
   .slide li {
     float: left;
-    margin-left:30px;
-    width: 585px;
-    height: 560px;
+    width: 620px;
+    height: 620px;
     background-color: #fff;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../../img/img_item_compact_d_200518.jpg);
-  }
-  .first_slide {
-    margin-left: 0;
   }
   .cameraSlide {
     margin-left: 30px;
@@ -418,6 +414,9 @@
   .cameraSlide a{
     width:200px;
     height:50px;
+  }
+  .first_slide {
+    margin-left: 0;
   }
   .subTheme {
     font-size: 1rem;

@@ -58,7 +58,7 @@
        slideM += 1;
        if(slideM > 5 ){
            slideM = 0;
-       }
+       }?
    },timed);
 
 
