@@ -70,10 +70,21 @@
    const classUl = $('.leica_classEachBox');
    const classLi = classUl.children('li');
 
+/*  classDiv.on('mouseover',function(e){
+     e.preventDefault();
+     let slideO = 0;
+
+     classUl.stop().animate({'margin-top':slideO * 20 +'px'});
+     slideO +=1;
+ }) */
+
+   let classOH = classDiv.outerHeight();
+
   
 
    classDiv.on("wheel", function (event) {
        event.preventDefault();
+       console.log(classOH);
     // 이벤트 핸들러: window 객체에 이벤트가 발생하면 실행할 기능
     // → 마우스 휠을 굴리면 window 객체에서 wheel 이벤트가 발생한다.
 
@@ -83,9 +94,8 @@
     console.log("deltaY = " + event.originalEvent.deltaY);
     if (event.originalEvent.deltaY < 0) {
         // wheeled up
-        classUl.animate({ scrollTop: -100 +'px'});
-        
-      }
+        classUl.animate({ scrollTop: -100   +'px'});
+    }
       else {
         // wheeled down
         classUl.animate({ scrollTop: +100 + 'px' });
