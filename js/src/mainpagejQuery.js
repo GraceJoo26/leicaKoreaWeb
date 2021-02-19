@@ -53,12 +53,13 @@
    
    const camSlideUl = $('.slide');
    let slideM = 0;
+   const camSlideLiLen = camSlideUl.children('li').length;
    setInterval (function(){
-       camSlideUl.stop().animate({ 'marginLeft' : ((slideM) * -100+'%') });
+       camSlideUl.stop().animate({ 'marginLeft' : ((slideM) * -650+'px') });
        slideM += 1;
-       if(slideM > 5 ){
+       if(slideM > camSlideLiLen-1 ){
            slideM = 0;
-       }?
+       }
    },timed);
 
 
