@@ -1,5 +1,6 @@
 @media only screen and (min-width: 1200px) {
   #wrap {
+    min-width:1200px;
     background-color: var(--co-bl);
   }                   
   a:focus{
@@ -9,6 +10,7 @@
     width: 100%;
     height: auto;
     background-color: #151515;
+    
   }
   .registerBox_01 {
     padding: 9px 40px;
@@ -16,6 +18,7 @@
     height: 40px;
     width: 1130px;
     text-transform: uppercase;
+   
   }
   .mob_registerBox {
     display: none;
@@ -388,16 +391,17 @@
     position:relative;
     top:-200px;
     margin:auto;
-    max-width:2550px;
-    overflow:hidden;
+    min-width:1200px;
+    overflow: hidden;
   }
   .slideWrap{
     max-width: 1250px;
     height:560px;
+    margin:0 auto;
+    box-sizing: border-box;
   }
   .slide {
     position:absolute;
-    width: 1500%;
     height: 560px;
   }
   .slide li {
@@ -544,7 +548,7 @@
   }
   .leica_classEachBox li {
     width: 420px;
-    height: 200px;
+    height: 252px;
   }
   .class_date,
   .red_point,
@@ -652,8 +656,8 @@
 
   .exhibit_date {
     position: absolute;
+    margin-left:2rem;
     top: 39.5rem;
-    left: 6rem;
     color: #fff;
     font-size: 1.2rem;
   }
@@ -673,6 +677,8 @@
     background-color: #e7371f;
   }
   .product {
+    margin:auto;
+    max-width:1200px;
     padding-top: 5rem;
     padding-left: 3.2rem;
     color: #fff;
@@ -690,18 +696,20 @@
   /*=====================footBox============*/
   #footBox {
     margin: auto;
-    width: auto;
-    height: auto;
     color: #fff;
   }
   .sitemap {
-    width: 1200px;
     height: 350px;
     padding: 3.2rem;
+    background-color: black;
   }
-  .sitemap div {
+  .footer_02, .footer_01 {
     float: left;
-    padding: 2.3rem;
+    padding: 1rem;
+  }
+  .footer_letter_wrap{
+    margin:auto;
+    width:1200px;
   }
   .footer_01 {
     margin-left: 0;
@@ -720,6 +728,8 @@
     color:#6f6f6f;
   }
   .companyInfo, .copyright{
+    width:1200px;
+    margin:auto;
     padding:2rem;
   }
 }
