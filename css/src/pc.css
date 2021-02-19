@@ -384,19 +384,21 @@
   .explain i {
     color: red;
   }
-  .slideWrap{
+  .wholeSlideWrap{
     position:relative;
     top:-200px;
     margin:auto;
-    width: 100%;
-    height:560px;
+    max-width:2550px;
     overflow:hidden;
+  }
+  .slideWrap{
+    max-width: 1250px;
+    height:560px;
   }
   .slide {
     position:absolute;
     width: 1500%;
     height: 560px;
-    overflow:hidden;
   }
   .slide li {
     float: left;

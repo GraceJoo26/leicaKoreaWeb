@@ -62,5 +62,9 @@
        }
    },timed);
 
+   //== AKADEMIE SCHDULE SCROLL BANNER
+
+   const classUl = $('.leica_classEachBox');
+
 
 })(jQuery);
