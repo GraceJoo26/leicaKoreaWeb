@@ -83,12 +83,12 @@
     console.log("deltaY = " + event.originalEvent.deltaY);
     if (event.originalEvent.deltaY < 0) {
         // wheeled up
-        classUl.animate({ scrollTop: -100 *5 +'px' });
+        classUl.animate({ scrollTop: -100 +'px'});
         
       }
       else {
         // wheeled down
-        classUl.animate({ scrollTop: +100*5 + 'px' });
+        classUl.animate({ scrollTop: +100 + 'px' });
       }
 });
 
