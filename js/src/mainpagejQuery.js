@@ -55,9 +55,9 @@
    let slideM = 0;
    const camSlideLiLen = camSlideUl.children('li').length;
    setInterval (function(){
-       camSlideUl.stop().animate({ 'marginLeft' : ((slideM) * -650+'px') });
+       camSlideUl.stop().animate({ 'marginLeft' : ((slideM) * -645+'px') });
        slideM += 1;
-       if(slideM > camSlideLiLen-1 ){
+       if(slideM > camSlideLiLen-4 ){
            slideM = 0;
        }
    },timed);
