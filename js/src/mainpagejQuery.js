@@ -78,11 +78,11 @@
      slideO +=1;
  }) */
 
-   let classOH = classDiv.outerHeight();
+   let classOH = classUl.outerHeight();
 
   
 
-   classDiv.on("wheel", function (event) {
+  /*  $('.leica_classBox').on("wheel", function (event) {
        event.preventDefault();
        console.log(classOH);
     // 이벤트 핸들러: window 객체에 이벤트가 발생하면 실행할 기능
@@ -100,7 +100,7 @@
         // wheeled down
         classUl.animate({ scrollTop: +100 + 'px' });
       }
-});
+}); */
 
 
 
