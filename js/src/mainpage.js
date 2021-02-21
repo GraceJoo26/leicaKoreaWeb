@@ -30,12 +30,12 @@
         })
     
    
-})(jQuery);*/
+})(jQuery);
 
 
 
 //dom_dropDown.js
-'use strict';
+ 'use strict';
 
  const domTitle = document.getElementsByClassName('gnb_title');
  const domMnudep2 = document.getElementsByClassName('depth2');
@@ -85,5 +85,21 @@
  domTitle[2].addEventListener('focus', function(){ DomMnuLiFn('block');  });
  domTitle[3].addEventListener('focus', function(){ DomMnuLiFn('block');  });
  domTitle[4].addEventListener('focus', function(){ DomMnuLiFn('block'); });
+ */
 
+(function($){
 
+    const gnb = $('.gnb');
+    const gnbUl = gnb.children('ul');
+    const gnbTitleA = gnbUl.find('a');
+    const depth2 = gnbTitleA.find('.depth2');
+    let it = $(this);
+    let i = it.index();
+console.log(i);
+    it.on('mouseover',function(e){
+        e.preventDefault(e);
+        depth2.eq(i).css({display:'block'});
+    })
+    
+    
+})(jQuery);
