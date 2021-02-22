@@ -91,15 +91,16 @@
 
     const gnb = $('.gnb');
     const gnbUl = gnb.children('ul');
-    const gnbTitleA = gnbUl.find('a');
-    const depth2 = gnbTitleA.find('.depth2');
-    let it = $(this);
-    let i = it.index();
-console.log(i);
-    it.on('mouseover',function(e){
-        e.preventDefault(e);
-        depth2.eq(i).css({display:'block'});
-    })
+    const gnbLi = gnbUl.children('li');
+    const menuLink = gnbLi.find('.menu_link');
+    let it = $(this).parent('li');
+    let itI = it.index();
+    indexcheck = itI;
     
+    menuLink.hover(function(){
+       $('.depth2').stop().slideToggle(200);
+   });
+
+
     
 })(jQuery);
